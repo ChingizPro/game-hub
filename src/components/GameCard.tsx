@@ -11,7 +11,9 @@ const GameCard = ({ game }: Props) => {
     <Card borderRadius={10} overflow={'hidden'}>
       <Image src={game.background_image} alt='game-poster' />
       <Heading fontSize={'3xl'}>{game.name}</Heading>
-      <PlatformIconList platforms={game.parent_platforms.map(p => p.platform)} />
+      <PlatformIconList
+        platforms={game.parent_platforms.map((p) => p.platform)}
+      />
     </Card>
   );
 };
