@@ -18,7 +18,7 @@ const App = () => {
           Aside
         </GridItem>
       </Show>
-      <GridItem area='main' bgColor='dodgerblue'>
+      <GridItem area='main'>
         <GameGrid />
       </GridItem>
     </Grid>
