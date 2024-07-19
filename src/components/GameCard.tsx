@@ -16,15 +16,17 @@ const GameCard = ({ game }: Props) => {
         alt='game-poster'
       />
       <CardBody>
-        <Heading fontSize={'3xl'}>{game.name}</Heading>
         {game.parent_platforms && (
-          <HStack justifyContent={'space-between'}>
+          <HStack marginBottom={4} justifyContent={'space-between'}>
             <PlatformIconList
               platforms={game.parent_platforms.map((p) => p.platform)}
             />
             <CriticScore score={game.metacritic} />
           </HStack>
         )}
+        <Heading marginBottom={3} fontSize={'3xl'}>
+          {game.name}
+        </Heading>
       </CardBody>
     </Card>
   );
