@@ -41,7 +41,12 @@ const App = () => {
         </GridItem>
       </Show>
       <GridItem area='main'>
-        <HStack marginX={4} marginBottom={4} spacing={5}>
+        <HStack
+          flexDirection={{ base: 'column', sm: 'row' }}
+          marginX={4}
+          marginBottom={4}
+          spacing={5}
+        >
           <PlatformSelector
             selectedPlatform={gameQuery.platform}
             onSelectPlatform={(platform) =>
