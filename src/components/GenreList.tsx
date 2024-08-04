@@ -25,7 +25,9 @@ const GenreList = ({ onSelectGenre, selectedGenre }: Props) => {
 
   return (
     <>
-      <Heading fontSize='27px' marginBottom='7px'>Genres</Heading>
+      <Heading fontSize='27px' marginBottom='7px'>
+        Genres
+      </Heading>
       <List>
         {isLoading &&
           skelets.map((skelet) => (
@@ -33,7 +35,7 @@ const GenreList = ({ onSelectGenre, selectedGenre }: Props) => {
               <SkeletonText />
             </Skeleton>
           ))}
-        {data.map((genre) => (
+        {data?.results.map((genre) => (
           <ListItem key={genre.id}>
             <HStack paddingY='5px'>
               <Image
