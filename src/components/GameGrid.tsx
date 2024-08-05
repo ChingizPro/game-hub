@@ -59,4 +59,4 @@ const GameGrid = ({ gameQuery }: Props) => {
   );
 };
 
-export default GameGrid;
+export default GameGrid; 
