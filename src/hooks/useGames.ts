@@ -2,19 +2,14 @@ import { useQuery } from '@tanstack/react-query';
 import { GameQuery } from '../App';
 import apiClient from '../services/api-client';
 import { FetchData } from '../services/api-client';
-
-export interface Platform {
-  id: number;
-  name: string;
-  slug: string;
-}
+import { Platform } from './usePlatforms';
 
 export interface Game {
   id: number;
   name: string;
   background_image: string;
   parent_platforms: { platform: Platform }[];
-  metacritic: number;
+  metacritic: number; 
   rating_top: number;
 }
 
