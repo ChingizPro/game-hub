@@ -8,14 +8,14 @@ export interface Platform {
   slug: string;
 }
 
-const apiClient = new APIClient<Platform>('/platforms');
+const apiClient = new APIClient<Platform>('/platforms/lists/parents');
 
 const usePlatforms = () => {
   return useQuery({
     queryKey: ['platforms'],
     staleTime: 24 * 60 * 60 * 1000,
     queryFn: apiClient.getAll,
-    initialData: { count: platforms.length, results: platforms },
+    initialData: platforms,
   });
 };
 
