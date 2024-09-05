@@ -9,11 +9,13 @@ interface Props {
 
 const Emoji = ({ rating }: Props) => {
   if (rating < 3) return null;
-  const emojiMap: {[key: number]: ImageProps} = {
+
+  const emojiMap: { [key: number]: ImageProps } = {
     5: { src: bullsEye, alt: 'recommended', boxSize: '40px' },
     4: { src: thumsUp, alt: 'exceptional', boxSize: '32px' },
     3: { src: meh, alt: 'meh', boxSize: '32px' },
   };
+  
   return <Image marginTop='5px' {...emojiMap[rating]} />;
 };
 
